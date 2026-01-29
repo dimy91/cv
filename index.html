@@ -55,22 +55,16 @@
       margin-bottom: 15px;
     }
 
-    .section {
-      margin-bottom: 25px;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.8s ease;
-    }
-
-    .section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
     .info-table td:first-child {
       font-weight: bold;
       width: 40%;
       color: #0a2a66;
+    }
+
+    .badge-skill {
+      background-color: #d4af37;
+      color: #0a2a66;
+      margin: 3px;
     }
   </style>
 </head>
@@ -82,8 +76,20 @@
       <h1>Curriculum Vitae<br>Ahmad Dimyati</h1>
     </div>
 
+    <!-- Ringkasan Profil -->
+    <div class="section visible">
+        <h2>Ringkasan Profil</h2>
+        <p>
+          Dosen dan pengembang sistem akademik dengan pengalaman lebih dari 10 tahun di bidang pendidikan 
+          dan pembinaan santri. Berpengalaman dalam manajemen akademik serta mulai mengembangkan keahlian 
+          di bidang teknologi informasi, khususnya LMS, OJS, dan portal akademik. Aktif membina kegiatan 
+          ekstrakurikuler dan organisasi, dengan kemampuan kepemimpinan, pengajaran, serta pengembangan web 
+          yang terus ditingkatkan.
+        </p>
+      </div>
+      
     <!-- Data Pribadi -->
-    <div class="section">
+    <div class="section visible">
       <h2>Data Pribadi</h2>
       <div class="table-responsive">
         <table class="table table-borderless info-table">
@@ -99,7 +105,7 @@
     </div>
 
     <!-- Pendidikan -->
-    <div class="section">
+    <div class="section visible">
       <h2>Pendidikan</h2>
       <ul class="list-unstyled">
         <li>SDN Pangalengan 5 (1998–2003)</li>
@@ -111,24 +117,24 @@
     </div>
 
     <!-- Pengalaman Kerja -->
-    <div class="section">
-        <h2>Pengalaman Kerja</h2>
-        <ul class="list-unstyled">
-          <li>Guru, Koordinator Ekskul, Pustakawan – PPM Al Ihsan Baleendah (2013–2022)</li>
-          <li>Pembina Ekskul Bola Volly – PPM Al Ihsan Baleendah (2014–sekarang)</li>
-          <li>Dosen – STIT Al Ihsan Baleendah (2022–sekarang)</li>
-          <li>Admin Siakad – <a href="https://siakad.stitalihsan.ac.id/login" target="_blank">Sistem Akademik STIT Al Ihsan Baleendah</a> (2022–sekarang)</li>
-          <li>Admin Portal – <a href="https://stitalihsan.ac.id/" target="_blank">Website resmi STIT Al Ihsan Baleendah</a> (2023–sekarang)</li>
-          <li>Tutor – Universitas Terbuka (2023–sekarang)</li>
-          <li>Implementator OJS – <a href="https://ejournal.stitalihsan.ac.id/index.php/" target="_blank">Rumah Jurnal STIT Al Ihsan Baleendah</a> (2024–sekarang)</li>
-          <li>Full-stack LMS Engineer – <a href="https://elearning.stitalihsan.ac.id/moodle30/login/index.php" target="_blank">E-learning STIT Al Ihsan Baleendah</a> (2024–sekarang)</li>
-          <li>Web Developer – <a href="https://pgmi.stitalihsan.ac.id/public/" target="_blank">Portal Prodi PGMI</a> (2024–sekarang)</li>
-          <li>Web Developer – <a href="https://mpi.stitalihsan.ac.id/public/" target="_blank">Portal Prodi MPI</a> (2025–sekarang)</li>
-        </ul>
-      </div>
-      
+    <div class="section visible">
+      <h2>Pengalaman Kerja</h2>
+      <ul class="list-unstyled">
+        <li>Guru, Koordinator Ekskul, Pustakawan – PPM Al Ihsan Baleendah (2013–2022)</li>
+        <li>Pembina Ekskul Bola Volly – PPM Al Ihsan Baleendah (2014–sekarang)</li>
+        <li>Dosen – STIT Al Ihsan Baleendah (2022–sekarang)</li>
+        <li>Admin Siakad – <a href="https://siakad.stitalihsan.ac.id/login" target="_blank">Sistem Akademik STIT Al Ihsan Baleendah</a> (2022–sekarang)</li>
+        <li>Admin Portal – <a href="https://stitalihsan.ac.id/" target="_blank">Website resmi STIT Al Ihsan Baleendah</a> (2023–sekarang)</li>
+        <li>Tutor – Universitas Terbuka (2023–sekarang)</li>
+        <li>Implementator OJS – <a href="https://ejournal.stitalihsan.ac.id/index.php/" target="_blank">Rumah Jurnal STIT Al Ihsan Baleendah</a> (2024–sekarang)</li>
+        <li>Full-stack LMS Engineer – <a href="https://elearning.stitalihsan.ac.id/moodle30/login/index.php" target="_blank">E-learning STIT Al Ihsan Baleendah</a> (2024–sekarang)</li>
+        <li>Web Developer – <a href="https://pgmi.stitalihsan.ac.id/public/" target="_blank">Portal Prodi PGMI</a> (2024–sekarang)</li>
+        <li>Web Developer – <a href="https://mpi.stitalihsan.ac.id/public/" target="_blank">Portal Prodi MPI</a> (2025–sekarang)</li>
+      </ul>
+    </div>
+
     <!-- Organisasi -->
-    <div class="section">
+    <div class="section visible">
       <h2>Organisasi</h2>
       <ul class="list-unstyled">
         <li>OPPMAI – Wakil Ketua (2008–2009)</li>
@@ -139,43 +145,32 @@
       </ul>
     </div>
 
-    <!-- Keahlian -->
-    <div class="section">
-      <h2>Keahlian</h2>
-      <ul class="list-unstyled">
-        <li>Pengajaran & Pembinaan Santri</li>
-        <li>Manajemen Akademik</li>
-        <li>Administrasi Sistem Akademik</li>
-        <li>Pengelolaan Portal & Website</li>
-        <li>Implementasi OJS</li>
-        <li>Full-stack LMS Engineering</li>
-        <li>Web Development</li>
-        <li>Pembinaan & Kepemimpinan</li>
-        <li>Keterampilan Keagamaan</li>
-      </ul>
-    </div>
-
-    <!-- Motto -->
-   <div class="section visible">
-  <h2>Motto</h2>
-  <p>“Hidup bagai air yang mengalir dengan aturannya, tapi air yang memberikan manfaat bukan mudarat pada sekelilingnya.”</p>
-</div>
-
-
-  <script>
-    const sections = document.querySelectorAll('.section');
-    const revealOnScroll = () => {
-      const triggerBottom = window.innerHeight * 0.85;
-      sections.forEach(section => {
-        const boxTop = section.getBoundingClientRect().top;
-        if (boxTop < triggerBottom) {
-          section.classList.add('visible');
-        }
-      });
-    };
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll);
-  </script>
+    <!-- Skills Matrix -->
+    <div class="section visible">
+        <h2>Keahlian</h2>
+        <div>
+          <span class="badge badge-skill">Pengajaran & Pembinaan Santri – Proficient</span>
+          <span class="badge badge-skill">Manajemen Akademik – Intermediate</span>
+          <span class="badge badge-skill">Administrasi Sistem Akademik – Intermediate</span>
+          <span class="badge badge-skill">Portal & Website Development – Intermediate</span>
+          <span class="badge badge-skill">Open Journal System (OJS) – Beginner–Intermediate</span>
+          <span class="badge badge-skill">Full-stack LMS Engineering – Intermediate</span>
+          <span class="badge badge-skill">Web Development – Intermediate</span>
+          <span class="badge badge-skill">Kepemimpinan & Pembinaan – Proficient</span>
+          <span class="badge badge-skill">Keterampilan Keagamaan – Intermediate</span>
+        </div>
+      </div>
+      
+    <!-- Career Objective -->
+    <div class="section visible">
+        <h2>Tujuan Karier</h2>
+        <p>
+          Berkontribusi dalam pengembangan pendidikan Islam dan nasional melalui integrasi kurikulum yang inovatif 
+          serta pemanfaatan teknologi digital. Fokus pada pembangunan sistem akademik, LMS, dan portal pembelajaran 
+          yang responsif dan inklusif, sekaligus memperkuat kualitas pengajaran, penelitian, dan pengabdian masyarakat 
+          di lingkungan STIT Al Ihsan Baleendah dan institusi mitra.
+        </p>
+      </div>
+        </div>
 </body>
 </html>
-
