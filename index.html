@@ -99,6 +99,47 @@
     li {
       margin-bottom: 6px;
     }
+
+    /* Default sudah untuk desktop/tablet */
+/* Tambahan khusus HP */
+@media (max-width: 600px) {
+  .cv-container {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background: rgba(255, 248, 230, 0.9); /* tetap hangat & transparan */
+    backdrop-filter: blur(4px);
+  }
+
+  h1 {
+    font-size: 1.6em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+    margin-top: 20px;
+  }
+
+  .profile img {
+    width: 120px;
+    height: 150px;
+    border-radius: 50% / 35%; /* oval tetap */
+  }
+
+  .info-table td:first-child {
+    width: 120px; /* kolom label lebih sempit */
+  }
+
+  ul {
+    padding-left: 16px;
+  }
+
+  li {
+    font-size: 0.95em;
+    margin-bottom: 4px;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -223,3 +264,4 @@
   </script>
 </body>
 </html>
+
