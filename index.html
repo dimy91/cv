@@ -2,6 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV Ahmad Dimyati</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
@@ -16,14 +17,15 @@
       background-attachment: fixed;
     }
 
+    /* Kustomisasi Lebar Kontainer sesuai permintaan (Desktop: ~80% dari 960px menjadi lebih ramping) */
     .cv-container {
-      max-width: 960px;
+      max-width: 800px; 
       margin: 2rem auto;
-      background: rgba(255, 248, 230, 0.35);
+      background: rgba(255, 248, 230, 0.45);
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       padding: 2rem;
-      backdrop-filter: blur(1px);
+      backdrop-filter: blur(3px);
     }
 
     h1, h2 {
@@ -32,22 +34,22 @@
     }
 
     h1 {
-      font-size: 2.2em;
+      font-size: 2em;
       border-bottom: 3px solid #d4af37;
       padding-bottom: 10px;
       text-align: center;
     }
 
     h2 {
-      font-size: 1.4em;
+      font-size: 1.3em;
       border-left: 4px solid #d4af37;
       padding-left: 10px;
-      margin-top: 30px;
+      margin-top: 10px;
     }
 
     .profile img {
-      width: 130px;
-      height: 190px;
+      width: 120px;
+      height: 170px;
       border-radius: 75% / 75%;
       border: 4px solid #d4af37;
       object-fit: cover;
@@ -65,103 +67,162 @@
       color: #0a2a66;
       margin: 3px;
     }
+
+    /* ---- SISTEM NAVIGASI PROFESIONAL (RESPONSIF) ---- */
+    
+    /* Navigasi Samping untuk Desktop */
+    .nav-cv {
+      position: sticky;
+      top: 2rem;
+    }
+    
+    .nav-cv .nav-link {
+      color: #0a2a66;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 6px;
+      margin-bottom: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-cv .nav-link:hover, .nav-cv .nav-link.active {
+      background-color: #d4af37;
+      color: #0a2a66;
+    }
+
+    /* Pengaturan Jarak Section */
+    section {
+      padding-top: 20px;
+      margin-bottom: 35px;
+    }
+
+    /* Efek Smooth Scroll saat Menu Diklik */
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
 <body>
-  <div class="cv-container">
-    <header class="profile text-center">
+
+  <div class="container cv-container">
+    <header class="profile text-center mb-4">
       <img src="Capture.PNG" alt="Foto Profil" class="img-fluid">
       <h1>Curriculum Vitae<br>Ahmad Dimyati</h1>
     </header>
 
-    <section class="section visible">
-        <h2>Ringkasan Profil</h2>
-        <p>
-          Dosen dan pengembang sistem akademik dengan pengalaman lebih dari 10 tahun di bidang pendidikan 
-          dan pembinaan santri. Berpengalaman dalam manajemen akademik serta mulai mengembangkan keahlian 
-          di bidang teknologi informasi, khususnya LMS, OJS, dan portal akademik. Aktif membina kegiatan 
-          ekstrakurikuler dan organisasi, dengan kemampuan kepemimpinan, pengajaran, serta pengembangan web 
-          yang terus ditingkatkan.
-        </p>
-    </section>
-      
-    <section class="section visible">
-      <h2>Data Pribadi</h2>
-      <div class="table-responsive">
-        <table class="table table-borderless info-table">
-          <tr><td>Nama Lengkap</td><td>Ahmad Dimyati</td></tr>
-          <tr><td>Tempat, Tanggal Lahir</td><td>Bandung, 8 Januari 1991</td></tr>
-          <tr><td>Agama</td><td>Islam</td></tr>
-          <tr><td>Email</td><td>ahmaddimyati91@gmail.com</td></tr>
-          <tr><td>Telepon</td><td>082121486655</td></tr>
-          <tr><td>Alamat</td><td>Baleendah, Bandung</td></tr>
-          <tr><td>Profesi</td><td>Dosen</td></tr>
-        </table>
-      </div>
-    </section>
-
-    <section class="section visible">
-      <h2>Pendidikan</h2>
-      <ul class="list-unstyled">
-        <li>SDN Pangalengan 5 (1998–2003)</li>
-        <li>MTs Al Ihsan Baleendah (2003–2006)</li>
-        <li>MA Al Ihsan Baleendah (2006–2009)</li>
-        <li>S1 Pendidikan Matematika – UIN SGD Bandung (2009–2013)</li>
-        <li>S2 Magister Pendidikan Matematika – Universitas Pasundan (2016–2018)</li>
-      </ul>
-    </section>
-
-    <section class="section visible">
-      <h2>Pengalaman Kerja</h2>
-      <ul class="list-unstyled">
-        <li>Guru, Koordinator Ekskul, Pustakawan – PPM Al Ihsan Baleendah (2013–2022)</li>
-        <li>Pembina Ekskul Bola Volly – PPM Al Ihsan Baleendah (2014–sekarang)</li>
-        <li>Dosen – STIT Al Ihsan Baleendah (2022–sekarang)</li>
-        <li>Admin Siakad – <a href="https://siakad.stitalihsan.ac.id/login" target="_blank">Sistem Academic STIT Al Ihsan Baleendah</a> (2022–sekarang)</li>
-        <li>Admin Portal – <a href="https://stitalihsan.ac.id/" target="_blank">Website resmi STIT Al Ihsan Baleendah</a> (2023–sekarang)</li>
-        <li>Tutor – Universitas Terbuka (2023–sekarang)</li>
-        <li>Implementator OJS – <a href="https://ejournal.stitalihsan.ac.id/index.php/" target="_blank">Rumah Jurnal STIT Al Ihsan Baleendah</a> (2024–sekarang)</li>
-        <li>Full-stack LMS Engineer – <a href="https://elearning.stitalihsan.ac.id/moodle30/login/index.php" target="_blank">E-learning STIT Al Ihsan Baleendah</a> (2024–sekarang)</li>
-        <li>Web Developer – <a href="https://pgmi.stitalihsan.ac.id/public/" target="_blank">Portal Prodi PGMI</a> (2024–sekarang)</li>
-        <li>Web Developer – <a href="https://mpi.stitalihsan.ac.id/public/" target="_blank">Portal Prodi MPI</a> (2025–sekarang)</li>
-      </ul>
-    </section>
-
-    <section class="section visible">
-      <h2>Organisasi</h2>
-      <ul class="list-unstyled">
-        <li>OPPMAI – Wakil Ketua (2008–2009)</li>
-        <li>Santri Husada – Bag. Penyuluhan (2008–2009)</li>
-        <li>HIMATIKA UIN – Bag. Keagamaan (2012–2013)</li>
-        <li>DKM Al-Hidayah – Pembantu Umum (2009–2013)</li>
-        <li>DKM Besar Al Muhajirin Baleendah – Petugas Harian (2016–2023)</li>
-      </ul>
-    </section>
-
-    <section class="section visible">
-        <h2>Keahlian</h2>
-        <div>
-          <span class="badge badge-skill">Pengajaran & Pembinaan Santri – Proficient</span>
-          <span class="badge badge-skill">Manajemen Akademik – Intermediate</span>
-          <span class="badge badge-skill">Administrasi Sistem Akademik – Intermediate</span>
-          <span class="badge badge-skill">Portal & Website Development – Intermediate</span>
-          <span class="badge badge-skill">Open Journal System (OJS) – Beginner–Intermediate</span>
-          <span class="badge badge-skill">Full-stack LMS Engineering – Intermediate</span>
-          <span class="badge badge-skill">Web Development – Intermediate</span>
-          <span class="badge badge-skill">Kepemimpinan & Pembinaan – Proficient</span>
-          <span class="badge badge-skill">Keterampilan Keagamaan – Intermediate</span>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="nav-cv">
+          <div class="p-2 bg-white bg-opacity-70 rounded shadow-sm">
+            <p class="text-center fw-bold mb-2 d-none d-md-block" style="color: #0a2a66;">Navigasi CV</p>
+            <nav class="nav nav-pills flex-row flex-md-column justify-content-center text-center">
+              <a class="nav-link flex-sm-fill" href="#ringkasan">Profil</a>
+              <a class="nav-link flex-sm-fill" href="#pribadi">Data</a>
+              <a class="nav-link flex-sm-fill" href="#pendidikan">Pendidikan</a>
+              <a class="nav-link flex-sm-fill" href="#kerja">Kerja</a>
+              <a class="nav-link flex-sm-fill" href="#organisasi">Organisasi</a>
+              <a class="nav-link flex-sm-fill" href="#keahlian">Keahlian</a>
+              <a class="nav-link flex-sm-fill" href="#tujuan">Tujuan</a>
+            </nav>
+          </div>
         </div>
-    </section>
-      
-    <section class="section visible">
-        <h2>Tujuan Karier</h2>
-        <p>
-          Berkontribusi dalam pengembangan pendidikan Islam dan nasional melalui integrasi kurikulum yang inovatif 
-          serta pemanfaatan teknologi digital. Fokus pada pembangunan sistem akademik, LMS, dan portal pembelajaran 
-          yang responsif dan inklusif, sekaligus memperkuat kualitas pengajaran, penelitian, dan pengabdian masyarakat 
-          di lingkungan STIT Al Ihsan Baleendah dan institusi mitra.
-        </p>
-    </section>
+      </div>
+
+      <div class="col-md-8">
+        
+        <section id="ringkasan" class="section visible">
+          <h2>Ringkasan Profil</h2>
+          <p class="text-justify">
+            Dosen dan pengembang sistem akademik dengan pengalaman lebih dari 10 tahun di bidang pendidikan 
+            dan pembinaan santri. Berpengalaman dalam manajemen akademik serta mulai mengembangkan keahlian 
+            di bidang teknologi informasi, khususnya LMS, OJS, dan portal akademik. Aktif membina kegiatan 
+            ekstrakurikuler dan organisasi, dengan kemampuan kepemimpinan, pengajaran, serta pengembangan web 
+            yang terus ditingkatkan.
+          </p>
+        </section>
+          
+        <section id="pribadi" class="section visible">
+          <h2>Data Pribadi</h2>
+          <div class="table-responsive">
+            <table class="table table-borderless info-table mb-0">
+              <tr><td>Nama Lengkap</td><td>Ahmad Dimyati</td></tr>
+              <tr><td>Tempat, Tanggal Lahir</td><td>Bandung, 8 Januari 1991</td></tr>
+              <tr><td>Agama</td><td>Islam</td></tr>
+              <tr><td>Email</td><td>ahmaddimyati91@gmail.com</td></tr>
+              <tr><td>Telepon</td><td>082121486655</td></tr>
+              <tr><td>Alamat</td><td>Baleendah, Bandung</td></tr>
+              <tr><td>Profesi</td><td>Dosen</td></tr>
+            </table>
+          </div>
+        </section>
+
+        <section id="pendidikan" class="section visible">
+          <h2>Pendidikan</h2>
+          <ul class="list-unstyled mb-0">
+            <li>SDN Pangalengan 5 (1998–2003)</li>
+            <li>MTs Al Ihsan Baleendah (2003–2006)</li>
+            <li>MA Al Ihsan Baleendah (2006–2009)</li>
+            <li>S1 Pendidikan Matematika – UIN SGD Bandung (2009–2013)</li>
+            <li>S2 Magister Pendidikan Matematika – Universitas Pasundan (2016–2018)</li>
+          </ul>
+        </section>
+
+        <section id="kerja" class="section visible">
+          <h2>Pengalaman Kerja</h2>
+          <ul class="list-unstyled mb-0">
+            <li>Guru, Koordinator Ekskul, Pustakawan – PPM Al Ihsan Baleendah (2013–2022)</li>
+            <li>Pembina Ekskul Bola Volly – PPM Al Ihsan Baleendah (2014–sekarang)</li>
+            <li>Dosen – STIT Al Ihsan Baleendah (2022–sekarang)</li>
+            <li>Admin Siakad – <a href="https://siakad.stitalihsan.ac.id/login" target="_blank">Sistem Akademik STIT Al Ihsan Baleendah</a> (2022–sekarang)</li>
+            <li>Admin Portal – <a href="https://stitalihsan.ac.id/" target="_blank">Website resmi STIT Al Ihsan Baleendah</a> (2023–sekarang)</li>
+            <li>Tutor – Universitas Terbuka (2023–sekarang)</li>
+            <li>Implementator OJS – <a href="https://ejournal.stitalihsan.ac.id/index.php/" target="_blank">Rumah Jurnal STIT Al Ihsan Baleendah</a> (2024–sekarang)</li>
+            <li>Full-stack LMS Engineer – <a href="https://elearning.stitalihsan.ac.id/moodle30/login/index.php" target="_blank">E-learning STIT Al Ihsan Baleendah</a> (2024–sekarang)</li>
+            <li>Web Developer – <a href="https://pgmi.stitalihsan.ac.id/public/" target="_blank">Portal Prodi PGMI</a> (2024–sekarang)</li>
+            <li>Web Developer – <a href="https://mpi.stitalihsan.ac.id/public/" target="_blank">Portal Prodi MPI</a> (2025–sekarang)</li>
+          </ul>
+        </section>
+
+        <section id="organisasi" class="section visible">
+          <h2>Organisasi</h2>
+          <ul class="list-unstyled mb-0">
+            <li>OPPMAI – Wakil Ketua (2008–2009)</li>
+            <li>Santri Husada – Bag. Penyuluhan (2008–2009)</li>
+            <li>HIMATIKA UIN – Bag. Keagamaan (2012–2013)</li>
+            <li>DKM Al-Hidayah – Pembantu Umum (2009–2013)</li>
+            <li>DKM Besar Al Muhajirin Baleendah – Petugas Harian (2016–2023)</li>
+          </ul>
+        </section>
+
+        <section id="keahlian" class="section visible">
+            <h2>Keahlian</h2>
+            <div>
+              <span class="badge badge-skill">Pengajaran & Pembinaan Santri – Proficient</span>
+              <span class="badge badge-skill">Manajemen Akademik – Intermediate</span>
+              <span class="badge badge-skill">Administrasi Sistem Akademik – Intermediate</span>
+              <span class="badge badge-skill">Portal & Website Development – Intermediate</span>
+              <span class="badge badge-skill">Open Journal System (OJS) – Beginner–Intermediate</span>
+              <span class="badge badge-skill">Full-stack LMS Engineering – Intermediate</span>
+              <span class="badge badge-skill">Web Development – Intermediate</span>
+              <span class="badge badge-skill">Kepemimpinan & Pembinaan – Proficient</span>
+              <span class="badge badge-skill">Keterampilan Keagamaan – Intermediate</span>
+            </div>
+        </section>
+          
+        <section id="tujuan" class="section visible">
+            <h2>Tujuan Karier</h2>
+            <p class="mb-0">
+              Berkontribusi dalam pengembangan pendidikan Islam dan nasional melalui integrasi kurikulum yang inovatif 
+              serta pemanfaatan teknologi digital. Fokus pada pembangunan sistem akademik, LMS, dan portal pembelajaran 
+              yang responsif dan inklusif, sekaligus memperkuat kualitas pengajaran, penelitian, dan pengabdian masyarakat 
+              di lingkungan STIT Al Ihsan Baleendah dan institusi mitra.
+            </p>
+        </section>
+        
+      </div>
+    </div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
