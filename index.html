@@ -71,10 +71,43 @@
     /* ---- SISTEM NAVIGASI PROFESIONAL (RESPONSIF) ---- */
     
     /* Navigasi Samping untuk Desktop */
-    .nav-cv {
-      position: sticky;
-      top: 2rem;
-    }
+    /* ---- PERBAIKAN NAVIGASI UNTUK HP (STICKY) ---- */
+
+/* Ini konfigurasi default yang berlaku untuk Desktop */
+.nav-cv {
+  position: sticky;
+  top: 1rem;
+  z-index: 1020; /* Memastikan menu tidak tertutup oleh konten lain saat di-scroll */
+}
+
+/* Ini konfigurasi khusus untuk layar HP/Mobile (Lebar layar di bawah 768px) */
+@media (max-width: 767.98px) {
+  .nav-cv {
+    position: sticky;
+    top: 0; /* Menempel pas di ujung atas layar HP */
+    background: rgba(255, 248, 230, 0.95); /* Kita tebalkan backgroundnya agar teks konten di belakangnya tidak membayang samar saat di-scroll */
+    padding: 10px 0;
+    margin-left: -1rem; /* Menyeimbangkan posisi container Bootstrap di HP */
+    margin-right: -1rem;
+    border-radius: 0 0 12px 12px; /* Memberikan lekukan estetis di bawah menu */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Memberikan efek bayangan tipis agar terlihat melayang di atas konten */
+  }
+  
+  /* Membuat menu horizontal di HP bisa digeser (scroll-x) jika menunya terlalu panjang */
+  .nav-cv nav {
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    justify-content: flex-start !important;
+    padding-bottom: 5px;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .nav-cv .nav-link {
+    white-space: nowrap; /* Mencegah teks menu terpotong menjadi 2 baris di HP */
+    font-size: 0.9rem; /* Sedikit memperkecil ukuran huruf agar pas di layar HP */
+    padding: 6px 10px;
+  }
+}
     
     .nav-cv .nav-link {
       color: #0a2a66;
@@ -114,7 +147,6 @@
       <div class="col-md-4 mb-4">
         <div class="nav-cv">
           <div class="p-2 bg-white bg-opacity-70 rounded shadow-sm">
-            <p class="text-center fw-bold mb-2 d-none d-md-block" style="color: #0a2a66;">Navigasi CV</p>
             <nav class="nav nav-pills flex-row flex-md-column justify-content-center text-center">
               <a class="nav-link flex-sm-fill" href="#ringkasan">Profil</a>
               <a class="nav-link flex-sm-fill" href="#pribadi">Data</a>
