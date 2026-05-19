@@ -73,27 +73,32 @@
     /* Navigasi Samping untuk Desktop */
     /* ---- PERBAIKAN NAVIGASI UNTUK HP (STICKY) ---- */
 
-/* Ini konfigurasi default yang berlaku untuk Desktop */
+/* ---- PERBAIKAN TOTAL NAVIGASI UNTUK HP (FIXED TOP) ---- */
+
 .nav-cv {
   position: sticky;
   top: 1rem;
-  z-index: 1020; /* Memastikan menu tidak tertutup oleh konten lain saat di-scroll */
+  z-index: 1020;
 }
 
-/* Ini konfigurasi khusus untuk layar HP/Mobile (Lebar layar di bawah 768px) */
 @media (max-width: 767.98px) {
   .nav-cv {
-    position: sticky;
-    top: 0; /* Menempel pas di ujung atas layar HP */
-    background: rgba(255, 248, 230, 0.95); /* Kita tebalkan backgroundnya agar teks konten di belakangnya tidak membayang samar saat di-scroll */
-    padding: 10px 0;
-    margin-left: -1rem; /* Menyeimbangkan posisi container Bootstrap di HP */
-    margin-right: -1rem;
-    border-radius: 0 0 12px 12px; /* Memberikan lekukan estetis di bawah menu */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Memberikan efek bayangan tipis agar terlihat melayang di atas konten */
+    position: fixed; /* Mengunci elemen mutlak terhadap layar HP */
+    top: 0;
+    left: 0;
+    width: 100%; /* Memaksa menu selebar layar HP */
+    z-index: 9999; /* Angka super tinggi agar mutlak berada di paling depan */
+    background: rgba(255, 248, 230, 0.98); /* Latar belakang tebal agar teks di bawahnya tertutup sempurna */
+    padding: 10px 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    border-radius: 0;
+  }
+
+  /* Berikan jarak pada konten utama agar tidak tertutup oleh menu yang di-fixed */
+  body {
+    padding-top: 60px; /* Menghindari bagian atas CV terpotong menu */
   }
   
-  /* Membuat menu horizontal di HP bisa digeser (scroll-x) jika menunya terlalu panjang */
   .nav-cv nav {
     flex-wrap: nowrap !important;
     overflow-x: auto;
@@ -103,12 +108,11 @@
   }
   
   .nav-cv .nav-link {
-    white-space: nowrap; /* Mencegah teks menu terpotong menjadi 2 baris di HP */
-    font-size: 0.9rem; /* Sedikit memperkecil ukuran huruf agar pas di layar HP */
-    padding: 6px 10px;
+    white-space: nowrap;
+    font-size: 0.9rem;
+    padding: 6px 12px;
   }
-}
-    
+}    
     .nav-cv .nav-link {
       color: #0a2a66;
       font-weight: 600;
